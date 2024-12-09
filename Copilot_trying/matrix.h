@@ -10,19 +10,19 @@
 
 class matrix {
 private:
-    int n;          // Rozmiar macierzy (n x n)
-    int** data;     // Wskaźnik na dynamicznie alokowaną macierz
+    int n;          
+    int** data;     
 
     void allocateMemory(int size);
 public:
-    // Konstruktory i destruktor
+
     matrix();
     matrix(int n);
     matrix(int n, int* t);
     matrix(const matrix& m);
     ~matrix();
 
-    // Metody
+
     matrix& alokuj(int n);
     matrix& wstaw(int x, int y, int wartosc);
     int pokaz(int x, int y) const;
@@ -38,7 +38,7 @@ public:
     matrix& nad_przekatna();
     matrix& szachownica();
 
-    // Operatory
+
     matrix& operator+(const matrix& m);
     matrix& operator*(const matrix& m);
     matrix& operator+(int a);
