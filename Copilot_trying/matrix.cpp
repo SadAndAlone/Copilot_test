@@ -1,13 +1,12 @@
 ﻿#include "matrix.h"
 
-// --- Pomocnicza funkcja alokująca pamięć ---
 void matrix::allocateMemory(int size) {
     data = new int* [size];
     for (int i = 0; i < size; ++i) {
         data[i] = new int[size]();
     }
 }
-// --- Konstruktory i destruktor ---
+
 matrix::matrix() : n(0), data(nullptr) {}
 
 matrix::matrix(int n) : n(n) {
@@ -35,7 +34,7 @@ matrix::~matrix() {
         delete[] data;
     }
 }
-// --- Metody ---
+
 matrix& matrix::alokuj(int newSize) {
     if (!data || newSize != n) {
         if (data) {
