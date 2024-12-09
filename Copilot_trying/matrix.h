@@ -37,3 +37,26 @@ public:
     matrix& pod_przekatna();
     matrix& nad_przekatna();
     matrix& szachownica();
+
+    // Operatory
+    matrix& operator+(const matrix& m);
+    matrix& operator*(const matrix& m);
+    matrix& operator+(int a);
+    matrix& operator*(int a);
+    matrix& operator-(int a);
+    friend matrix operator+(int a, const matrix& m);
+    friend matrix operator*(int a, const matrix& m);
+    friend matrix operator-(int a, const matrix& m);
+    matrix& operator++(int);
+    matrix& operator--(int);
+    matrix& operator+=(int a);
+    matrix& operator-=(int a);
+    matrix& operator*=(int a);
+    matrix& operator()(double val);
+    friend std::ostream& operator<<(std::ostream& o, const matrix& m);
+    bool operator==(const matrix& m) const;
+    bool operator>(const matrix& m) const;
+    bool operator<(const matrix& m) const;
+};
+
+#endif
