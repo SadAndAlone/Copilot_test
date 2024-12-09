@@ -7,7 +7,7 @@ int main() {
     matrix m1;
     matrix m2(n, t);
 
-    std::cout << "Macierz m2:\n" << m4;
+    std::cout << "Macierz m2:\n" << m2;
 
     m2.wstaw(0, 0, 42);
     std::cout << "Po wstawieniu 42 do (0, 0):\n" << m2;
