@@ -20,7 +20,7 @@ public:
     matrix(int n, int* t);
     matrix(const matrix& m);
     ~matrix();
-
+  
     matrix& alokuj(int n);
     matrix& wstaw(int x, int y, int wartosc);
     int pokaz(int x, int y) const;
