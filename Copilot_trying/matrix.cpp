@@ -88,3 +88,12 @@ matrix& matrix::losuj(int x) {
     }
     return *this;
 }
+std::ostream& operator<<(std::ostream& o, const matrix& m) {
+    for (int i = 0; i < m.n; ++i) {
+        for (int j = 0; j < m.n; ++j) {
+            o << std::setw(4) << m.data[i][j];
+        }
+        o << "\n";
+    }
+    return o;
+}
