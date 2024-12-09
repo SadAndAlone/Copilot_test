@@ -15,14 +15,12 @@ private:
 
     void allocateMemory(int size);
 public:
-
     matrix();
     matrix(int n);
     matrix(int n, int* t);
     matrix(const matrix& m);
     ~matrix();
-
-
+  
     matrix& alokuj(int n);
     matrix& wstaw(int x, int y, int wartosc);
     int pokaz(int x, int y) const;
@@ -37,7 +35,6 @@ public:
     matrix& pod_przekatna();
     matrix& nad_przekatna();
     matrix& szachownica();
-
 
     matrix& operator+(const matrix& m);
     matrix& operator*(const matrix& m);
